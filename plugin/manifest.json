@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "OmniAI",
+    "version": "1.0",
+
+    "description": "Adds a red border to all webpages matching mozilla.org.",
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+        "js": ["index.js"],
+        "matches": ["<all_urls>"]
+        }
+    ]
+
+}

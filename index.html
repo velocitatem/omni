@@ -1,27 +1,31 @@
-
-<input type="text" placeholder="API KEY HERE"  />
-
+<p id="omni"></p>
+<button id="requestKey">Request Key</button>
 <script>
 
- function getKey(source, callback) {
+ let omni = window
+ function requestKey() {
+     omni.addEventListener("process-key", function(e) {
+         console.log(e.detail);
+     });
+     console.log("requesting key");
      let event = new CustomEvent("omni-get-api-key", {
          detail: {
-             source: source,
-             callback: callback,
-             window: window
+             source: "openai",
+             auth: "process-key"
          }
-     });
-     // check if the event is being listened to
-     // wait for the event to be listened to
-     // then dispatch the event
-     window.dispatchEvent(event);
+     })
+     console.log(event);
+     let res = omni.dispatchEvent(event);
+     console.log(event);
  }
 
+ function inject(){
+     // inject the script above into the page
+        let script = document.createElement("script");
+        script.innerHTML = `(${requestKey.toString()})();`;
+        document.body.appendChild(script);
 
-    setTimeout(function() {
+ }
+ document.getElementById("requestKey").addEventListener("click", inject);
 
-        getKey("openai", function(key) {
-            console.log(key)
-        });
-    }, 2000);
 </script>

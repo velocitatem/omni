@@ -5,6 +5,11 @@
     "version": "1.0",
 
     "description": "Adds a red border to all webpages matching mozilla.org.",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
 
     "permissions": [
         "activeTab",

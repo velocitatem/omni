@@ -4,7 +4,7 @@
     "name": "OmniAI",
     "version": "1.0",
 
-    "description": "Adds a red border to all webpages matching mozilla.org.",
+    "description": "Stop copy-pasting your AI api-keys, use Omni.",
     "icons": {
         "16": "icon.png",
         "48": "icon.png",
@@ -25,6 +25,6 @@
         "js": ["index.js"],
         "matches": ["<all_urls>"]
         }
-    ]
-
+    ],
+    "homepage_url": "https://github.com/velocitatem/omni"
 }

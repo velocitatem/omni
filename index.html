@@ -1,8 +1,7 @@
 <p id="omni"></p>
-<script src="https://raw.githubusercontent.com/velocitatem/omni/main/script.js"></script>
+<script src="./script.js"></script>
 <button id="requestKey">Request Key</button>
 <script>
-
     document.getElementById('requestKey').addEventListener('click', () => {
         requestKey("openai", (key) => console.log(key));
     });

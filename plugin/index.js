@@ -6,18 +6,26 @@ window.addEventListener("omni-get-api-key", async function(e) {
     let key = {[source]: "denied"};
     let consent = confirm("Allow access to your API key from "+source+"?");
     if (consent) {
-        key = await browser.storage.local.get("api-key");
+        key = await browser.storage.local.get(source);
+        localStorage.setItem("omni-api-key", key[source]);
+        let event = new CustomEvent(e.detail.callbackListener, {
+            detail: {
+                apiKey: "omni-api-key"
+            }
+        });
+        window.dispatchEvent(event);
+    }
+    else {
+        let event = new CustomEvent(e.detail.callbackListener, {
+            detail: {
+                apiKey: "denied"
+            }
+        });
+        window.dispatchEvent(event);
     }
     // create a new event
     // save to localStorage
-    localStorage.setItem("omni-api-key", key[source]);
-    let event = new CustomEvent(e.detail.callbackListener, {
-        detail: {
-            apiKey: "omni-api-key"
-        }
-    });
     // dispatch the event
-    window.dispatchEvent(event);
 
 
 }, false);
@@ -40,6 +48,7 @@ function autoFind() {
         // add an event listener to the window object
         omni.addEventListener(callbackListener, function (e) {
             let s = localStorage.getItem("omni-api-key");
+            console.log(s);
             if (s && s !== "denied") {
                 // simulate user input by clicking the input
                 // copy the api key to clipboard

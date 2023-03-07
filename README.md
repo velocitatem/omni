@@ -3,20 +3,20 @@
 Stop copy-pasting your AI api-keys, use Omni.
 
 
-## How?
+## How ❓
 Omni is designed both for developers and consumers. As a consumer you can install the Omni Plugin into your browser and use it to store your API keys. As a developer you use the Omni API to access easily request access to those keys.
 
-## Why?
+## Why ❓
 There are plenty apps in the world that make use of GPT3 or ChatGPT, most of them now require the user to provide their own keys to access those features, that can be tedious, omni aims to solve that problem.
 
-## How to use?
+## How to use ❓
 Omni is designed to be as easy to use as possible, you can install the Omni Plugin into your browser and use it to store your API keys. As a developer you use the Omni API to access easily request access to those keys.
-### As a consumer
+### As a consumer 🔌
 1. Install the Omni Plugin
 2. Go to plugin settings and add your API keys
 3. Now, when you visit a website that uses Omni, you will be able to use the features that require API keys.
 
-### As a developer
+### As a developer 🧑‍💻
 
 1. Add the api to your website
 
@@ -51,7 +51,7 @@ key=st.text_input("OpenAI API Key", placeholder="omni-[KEY_NAME]")
 
 Omni will read the page and if it finds a text input with the placeholder `omni-[KEY_NAME]` it will replace it with the key that the user has stored in Omni.
 
-## On boarding
+## On boarding 🛳️
 What if a user does not have omni but as a developer you want to use it? Well, you can use the on boarding feature to make it easy for the user to install omni. Here are some resources you can use to make it easy for the user to install omni:
 
 ```html
@@ -75,7 +75,7 @@ Here are some badges:
 
 
 
-## Roadmap
+## Roadmap 🛣️
 - [x] Create a basic plugin
 - [x] Create a basic API
 - [ ] Improve UI of plugin

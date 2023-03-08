@@ -9,6 +9,11 @@ Omni is designed both for developers and consumers. As a consumer you can instal
 Take a look at this in action here:
 
 
+
+https://user-images.githubusercontent.com/60182044/223773599-f026e7ad-4ac7-4a7b-b34e-b4f70eb97445.mp4
+
+
+
 ## Why ❓
 There are plenty apps in the world that make use of GPT3 or ChatGPT, most of them now require the user to provide their own keys to access those features, that can be tedious, omni aims to solve that problem.
 

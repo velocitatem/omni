@@ -2,13 +2,11 @@
 
     "manifest_version": 2,
     "name": "OmniAI",
-    "version": "1.0",
+    "version": "1.1",
 
     "description": "Stop copy-pasting your AI api-keys, use Omni.",
     "icons": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+        "500": "icon.png"
     },
 
     "permissions": [

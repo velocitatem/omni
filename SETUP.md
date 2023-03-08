@@ -6,4 +6,5 @@
 
 # Setup
 1. Go to the addon page [here](about:addons) and click the "Preferences" button for OmniAI
+2. Get your OpenAI API key [here](https://beta.openai.com/account/api-keys)
 2. Now add your API key and you should be good to go!

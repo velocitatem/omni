@@ -23,18 +23,9 @@ window.addEventListener("omni-get-api-key", async function(e) {
         });
         window.dispatchEvent(event);
     }
-    // create a new event
-    // save to localStorage
-    // dispatch the event
 
 
 }, false);
-// what dose this false do?
-// ans: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-
-// find inputs with value = "Omni will fill this in for you [any words here]"
-// if found, alert("Omni will fill this in for you")
-
 
 function autoFind() {
     let list = document.querySelectorAll("input[placeholder^='omni-']");
@@ -49,7 +40,7 @@ function autoFind() {
         omni.addEventListener(callbackListener, function (e) {
             let s = localStorage.getItem("omni-api-key");
             console.log(s);
-            if (s && s !== "denied") {
+            if (s && s !== "denied" && s !== "undefined") {
                 // simulate user input by clicking the input
                 // copy the api key to clipboard
                 // ask user to paste the api key
@@ -57,6 +48,11 @@ function autoFind() {
                 window.navigator.clipboard.writeText(s).then(function() {
                     input.click();
                 });
+            }
+            else if (s === "denied") {
+            }
+            else {
+                alert("No API key found");
             }
         });
         console.log("requesting key");

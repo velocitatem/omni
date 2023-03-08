@@ -6,6 +6,9 @@ Stop copy-pasting your AI api-keys, use Omni.
 ## How ❓
 Omni is designed both for developers and consumers. As a consumer you can install the Omni Plugin into your browser and use it to store your API keys. As a developer you use the Omni API to access easily request access to those keys.
 
+Take a look at this in action here:
+
+
 ## Why ❓
 There are plenty apps in the world that make use of GPT3 or ChatGPT, most of them now require the user to provide their own keys to access those features, that can be tedious, omni aims to solve that problem.
 

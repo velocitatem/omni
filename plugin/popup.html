@@ -1,3 +1,71 @@
-<h1>OmniAI</h1>
+<div class="head">
+    <h1>OmniAI</h1>
+    <img src="icon.png" width="100" height="100" alt="icon" />
+</div>
+<p>Stop copy-pasting your AI api-keys, use Omni</p>
+<a href="https://github.com/velocitatem/omni">GitHub</a>
+<style>
+ body {
+     font-family: sans-serif;
+ }
+ .head {
+     display: flex;
+     align-items: center;
+ }
+ .head img {
+     margin-left: 10px;
+ }
+ a {
+     text-decoration: none;
+        color: #0070f3;
+ }
 
-<script src="index.js"></script>
+ h1 {
+     font-size: 2em;
+ }
+ h2 {
+     font-size: 1.5em;
+ }
+ p {
+     font-size: 1.2em;
+ }
+ input {
+     font-size: 1.2em;
+     padding: 0.5em;
+     margin: 0.5em;
+ }
+ button {
+     font-size: 1.2em;
+     padding: 0.5em;
+     margin: 0.5em;
+ }
+
+ /* each il item also gets a botton on the right */
+ li {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ li button {
+     background: none;
+     border: none;
+     color: red;
+     font-size: 1.5em;
+     cursor: pointer;
+ }
+
+ li button:hover {
+     color: darkred;
+ }
+
+ li button:focus {
+     outline: none;
+ }
+
+ /* the api key is a span with class .apikey */
+ .apikey {
+     font-size: 1.2em;
+     color: #666;
+ }
+
+</style>

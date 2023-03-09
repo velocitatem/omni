@@ -51,7 +51,7 @@ The `requestKey` function takes two arguments, the first one is the name of the 
 
 You can find a demo [here](./demo/index.html)
 
-### Streamlit
+### Streamlit (coming soon)
 Streamlit is full of apps that use GPT3, but they all require the user to provide their own API keys, this is a problem, because it is tedious to do that.
 
 As a developer you should add the following code to your app

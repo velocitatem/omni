@@ -27,6 +27,7 @@ window.addEventListener("omni-get-api-key", async function(e) {
 
 }, false);
 
+// does not fully work yet
 function autoFind() {
     let list = document.querySelectorAll("input[placeholder^='omni-']");
     console.log(list);
@@ -63,9 +64,5 @@ function autoFind() {
     });
 }
 
-
-// if the href is localhost:8501
-if (document.location.href === "http://localhost:8501/") {
-    // wait for 5 seconds and run autoFind
-    setTimeout(autoFind, 5000);
-}
+// add event listener for autoFind
+window.addEventListener("omni-auto-find", autoFind);

@@ -3,6 +3,8 @@
     <img src="icon.png" width="100" height="100" alt="icon" />
 </div>
 <p>Stop copy-pasting your AI api-keys, use Omni</p>
+<button id="add">Select Keys</button>
+<div id="keys"></div>
 <a href="https://github.com/velocitatem/omni">GitHub</a>
 <style>
  body {
@@ -15,6 +17,38 @@
  .head img {
      margin-left: 10px;
  }
+ #add {
+     background: #0070f3;
+     color: white;
+     border: none;
+     padding: 0.5em;
+     margin: 0.5em;
+     cursor: pointer;
+ }
+ #add:hover {
+     background: #0060d3;
+ }
+ #keys {
+     margin: 0.5em;
+     /* this will show a bunch of buttons, I want them in a grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+ }
+ .key {
+     /* each key is as button
+        background: #eee;
+      */
+     background: #eee;
+        border: none;
+        padding: 0.5em;
+        margin: 0.5em;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
  a {
      text-decoration: none;
         color: #0070f3;
@@ -69,3 +103,5 @@
  }
 
 </style>
+<script src="./popup.js"></script>
+<script src="./index.js"></script>

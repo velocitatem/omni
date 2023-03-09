@@ -20,9 +20,11 @@ There are plenty apps in the world that make use of GPT3 or ChatGPT, most of the
 ## How to use ❓
 Omni is designed to be as easy to use as possible, you can install the Omni Plugin into your browser and use it to store your API keys. As a developer you use the Omni API to access easily request access to those keys.
 ### As a consumer 🔌
-1. Install the Omni Plugin
+1. Install the [Omni Plugin](https://addons.mozilla.org/en-US/firefox/addon/omniai/)
 2. Go to plugin settings and add your API keys
 3. Now, when you visit a website that uses Omni, you will be able to use the features that require API keys.
+
+You can also follow [this setup guide](./SETUP.md)
 
 ### As a developer 🧑‍💻
 

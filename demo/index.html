@@ -1,0 +1,123 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/velocitatem/omni@main/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>OmniAI Demo</h1>
+        <button id="requestKey">Request Key</button>
+        <div class="input">
+            <input type="text" id="prompt" placeholder="Enter prompt" disabled>
+            <button id="submit" >Submit</button>
+        <p id="response"></p>
+    </div>
+</body>
+
+<script>
+    document.getElementById('submit').addEventListener('click', () => {
+        const prompt = document.getElementById('prompt').value;
+        fetchResponse(prompt);
+    });
+    let globalkey = null;
+    function fetchResponse(prompt) {
+        fetch('https://api.openai.com/v1/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${globalkey}`
+            },
+            body: JSON.stringify({
+                "model": "text-davinci-003",
+                "prompt": prompt,
+                "temperature": 0.7,
+                "max_tokens": 256,
+                "top_p": 1,
+                "frequency_penalty": 0,
+                "presence_penalty": 0
+            })
+        })
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('response').innerHTML = data.choices[0].text;
+            })
+            .catch(err => {
+                // Handle the error
+            });
+
+
+    }
+    function handler(key) {
+    document.getElementById('prompt').disabled = false;
+    globalkey = key;
+    }
+
+    document.getElementById('requestKey').addEventListener('click', () => {
+        requestKey("openai", handler);
+    });
+
+</script>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    /* centered container */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    #requestKey {
+        /* it should not look too important but still be clickable and look like a button */
+        background: #fff;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        cursor: pointer;
+        /* underline the text to make it look like a link */
+        text-decoration: underline;
+        /* remove the outline when clicking on it */
+        outline: none;
+
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        margin-top: 5rem;
+    }
+    #submit {
+        /* nice heavy button */
+        background: #000;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        cursor: pointer;
+
+    }
+    .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 5rem;
+        width: 50%;
+        text-align: center;
+    }
+
+</style>

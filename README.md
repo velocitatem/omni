@@ -30,12 +30,11 @@ You can also follow [this setup guide](./SETUP.md)
 
 1. Add the api to your website
 
-Download `script.js` from the repository, for now this is just a placeholder, but in the future it will be a script that will be hosted on a CDN.
 
 Import the script into your website
 
 ```html
-<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/velocitatem/omni@main/script.js" type="text/javascript"></script>
 ```
 
 2. Add the following code to your website
@@ -49,6 +48,8 @@ document.getElementById('requestKey').addEventListener('click', () => {
 Where the `requestKey` element is a button that the user will click to request the key. This must be a button because of the user interaction. If you know a better way to do this, please let me know.
 
 The `requestKey` function takes two arguments, the first one is the name of the API you want to access, the second one is a callback function that will be called when the user accepts the request. The callback function will be called with the key as an argument.
+
+You can find a demo [here](./demo/index.html)
 
 ### Streamlit
 Streamlit is full of apps that use GPT3, but they all require the user to provide their own API keys, this is a problem, because it is tedious to do that.

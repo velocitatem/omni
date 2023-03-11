@@ -64,5 +64,7 @@ function autoFind() {
     });
 }
 
+
+
 // add event listener for autoFind
 window.addEventListener("omni-auto-find", autoFind);

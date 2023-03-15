@@ -1,4 +1,4 @@
-# Omni AI
+# Omni AI (beta)
 
 Stop copy-pasting your AI api-keys, use Omni.
 
@@ -81,8 +81,11 @@ Here are some badges:
 
 
 
+## Contributing 🤝
+Any contributions you make are greatly appreciated.
+
 ## Roadmap 🛣️
 - [x] Create a basic plugin
 - [x] Create a basic API
-- [ ] Improve UI of plugin
-- [ ] Create better access to API
+- [x] Improve UI of plugin
+- [x] Create better access to API

@@ -6,6 +6,8 @@ function requestKey(source, callback) {
         let s = localStorage.getItem("omni-api-key");
         if (s) {
             callback(s);
+        } else {
+            callback(null);
         }
     });
     console.log("requesting key");

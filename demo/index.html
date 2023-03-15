@@ -6,6 +6,7 @@
     <div class="container">
         <h1>OmniAI Demo</h1>
         <button id="requestKey">Request Key</button>
+        <div><span id="loadedYN"></span></div>
         <div class="input">
             <input type="text" id="prompt" placeholder="Enter prompt" disabled>
             <button id="submit" >Submit</button>
@@ -49,8 +50,14 @@
 
     }
     function handler(key) {
-    document.getElementById('prompt').disabled = false;
-    globalkey = key;
+        document.getElementById('prompt').disabled = false;
+        globalkey = key;
+        console.log(key);
+        if (key) {
+            document.getElementById('loadedYN').innerHTML = "Key loaded";
+        } else {
+            document.getElementById('loadedYN').innerHTML = "Key not loaded";
+        }
     }
 
     document.getElementById('requestKey').addEventListener('click', () => {

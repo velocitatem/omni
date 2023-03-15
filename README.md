@@ -1,5 +1,7 @@
 # Omni AI (beta)
 
+_currently only for firefox_
+
 Stop copy-pasting your AI api-keys, use Omni.
 
 ## How ❓
